@@ -1,4 +1,9 @@
-
+<?php
+		session_start();
+		if(!(isset($_SESSION['username']))){
+				header('location:loginForm.php');
+		}
+?>
 <html>
 <head>
 <style>
@@ -32,6 +37,8 @@ background-color: #111;
 <ul>
 <li><a class="active" href="display.php">Home</a></li>
 <li><a href="form.php">Add Data</a></li>
+<li><a href="logout.php">Log Out</a></li>
+<li><a href="csv.php">Dump to Excel</a></li>
 
 
 </ul>
